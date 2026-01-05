@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+       
+        List<int> li = new List<int>();
+        string[] input = Console.ReadLine().Split(' ');
+
+        foreach (string s in input)
+        {
+            li.Add(int.Parse(s));
+        }
+
+
+        Console.WriteLine("Using string.Join " + string.Join(" ",li));
+    }
+}
