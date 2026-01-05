@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        List<int> li_1 = new List<int>{1,2,3,4};
+        List<int> li_2 = new List<int>{3,4,5,6};
+
+        // Merge and remove duplicates
+        List<int> mergeList = li_1.Concat(li_2)
+                                  .Distinct()
+                                  .ToList(); // Convert IEnumerable to List
+
+        // Print the merged list
+        foreach (int num in mergeList)
+        {
+            Console.Write(num + " ");
+        }
+    }
+}
