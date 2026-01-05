@@ -1,0 +1,8 @@
+
+List<int> list = new List<int> { 1, 2, 3, 2, 4, 2, 5 };
+        // int oldNumber = 2;
+        // int newNumber = 99;
+        
+        List<int> newList = list.Select(n => n == 2 ? 99 : n).ToList();
+
+        Console.WriteLine("Updated List: "+string.Join(" ",newList))
