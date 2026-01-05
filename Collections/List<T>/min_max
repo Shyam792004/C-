@@ -1,0 +1,50 @@
+
+using System;
+using System.Collections.Generic;
+
+class HelloWorld 
+{
+  static void Main() 
+  {
+    int n=int.Parse(Console.ReadLine());
+    int [] arr=new int[n];
+    string [] input=Console.ReadLine().Split(' ');
+    for(int i=0;i<n;i++)
+    {
+        arr[i]=int.Parse(input[i]);
+        
+    }
+   
+    int [] new_arr=Max_min(arr);
+    
+    Console.WriteLine("Max: "+new_arr[0]+" Mini: "+new_arr[1]);
+  }
+  public static int[] Max_min (int [] arr)
+  {
+      int n=arr.Length;
+      
+      List<int>li=new List<int>();
+      
+      int lar=int.MinValue;
+      int sma=int.MaxValue;
+      foreach(int i in arr)
+      {
+          if(lar<i)
+          {
+              
+              lar=i;
+              
+          }
+          if(sma>i)
+          {
+              sma=i;
+              
+          }
+      }
+      li.Add(lar);
+      li.Add(sma);
+      
+      return li.ToArray();
+      
+  }
+}
