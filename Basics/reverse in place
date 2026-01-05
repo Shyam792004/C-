@@ -1,0 +1,33 @@
+
+using System;
+class HelloWorld 
+{
+  static void Main() 
+  {
+    int n=int.Parse(Console.ReadLine());
+    int [] arr=new int[n];
+    string [] input=Console.ReadLine().Split(' ');
+    for(int i=0;i<n;i++)
+    {
+        arr[i]=int.Parse(input[i]);
+        
+    }
+    Reverse(arr);
+  }
+  public static void Reverse (int [] arr)
+  {
+      int length=arr.Length;
+      int l=0;
+      int r=length-1;
+      while(l<r)
+      {
+          int temp=arr[l];
+          arr[l]=arr[r];
+          arr[r]=temp;
+          l++;
+          r--;
+      }
+      foreach(int x in arr)
+      Console.Write(x+" ");
+  }
+}
