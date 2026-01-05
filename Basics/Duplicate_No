@@ -1,0 +1,44 @@
+
+using System;
+using System.Collections.Generic;
+class HelloWorld 
+{
+  static void Main() 
+  {
+    int n=int.Parse(Console.ReadLine());
+    int [] arr=new int[n];
+    string [] input=Console.ReadLine().Split(' ');
+    for(int i=0;i<n;i++)
+    {
+        arr[i]=int.Parse(input[i]);
+        
+    }
+   
+    int duplicate_Number=Duplicate(arr);
+    if(duplicate_Number==-1)
+    {
+        Console.WriteLine("No Duplicate");
+    }
+    else
+    {
+        Console.Write("Dupliate Number : "+duplicate_Number);
+    }
+  }
+  public static int Duplicate (int [] arr)
+  {
+      HashSet<int> hs=new HashSet<int>();
+      foreach(int i in arr)
+      {
+          if(hs.Contains(i))
+          {
+              return i;
+          }
+          else
+          {
+              hs.Add(i);
+          }
+      }
+      return -1;
+      
+  }
+}
