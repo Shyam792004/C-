@@ -1,0 +1,41 @@
+
+using System;
+using System.Collections.Generic;
+
+class HelloWorld 
+{
+  static void Main() 
+  {
+    int n=int.Parse(Console.ReadLine());
+    int [] arr=new int[n];
+    string [] input=Console.ReadLine().Split(' ');
+    for(int i=0;i<n;i++)
+    {
+        arr[i]=int.Parse(input[i]);
+        
+    }
+   
+    int [] even_array=Remove_Odd(arr);
+    
+    foreach(int i in even_array)
+    {
+        Console.Write(i+" ");
+    }
+  }
+  public static int[] Remove_Odd (int [] arr)
+  {
+      int n=arr.Length;
+      
+      List<int>li=new List<int>(arr);
+      
+      foreach(int i in arr)
+      {
+          if(i%2!=0)
+          {
+              li.Remove(i);
+          }
+      }
+      return li.ToArray();
+      
+  }
+}
