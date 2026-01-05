@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        
+        List<int> list = new List<int> { 1, 2, 3, 2, 4, 2, 5 };
+        int oldNumber = 2;
+        int newNumber = 99;
+        
+        int index = list.IndexOf(oldNumber);
+        while (index != -1)
+        {
+            list[index] = newNumber;           // replace
+            index = numbers.IndexOf(oldNumber, index + 1); // find next occurrence
+        }
+        
+        Console.WriteLine("Updated List: "+string.Join(" ",numbers));
+
+    }
+}
