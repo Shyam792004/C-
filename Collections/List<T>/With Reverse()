@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter numbers separated by space:");
+        List<int> li = new List<int>();
+        string[] input = Console.ReadLine().Split(' ');
+
+        foreach (string s in input)
+        {
+            li.Add(int.Parse(s));
+        }
+
+        li.Reverse();
+        
+        Console.WriteLine("Reversed List: " + string.Join(" ",li));
+    }
+}
