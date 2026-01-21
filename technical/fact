@@ -1,0 +1,24 @@
+
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class HelloWorld {
+    static int fact(int n)
+    {
+        
+        if(n==1)
+        {
+            return 1;
+        }
+        return n*fact(n-1);
+        
+        
+    }
+  static void Main() {
+      int n=int.Parse(Console.ReadLine());
+      int ans=fact(n);
+      Console.WriteLine(ans);
+  }
+  
+}
