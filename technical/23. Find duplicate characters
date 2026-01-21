@@ -1,0 +1,13 @@
+string str=Console.ReadLine();
+     HashSet<char>hs=new HashSet<char>();
+     foreach(var i in str)
+     {
+         if(hs.Contains(i))
+         {
+             Console.WriteLine(i);
+         }
+         else
+         {
+             hs.Add(i);
+         }
+     }
