@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+class Program 
+{
+    static void Main()
+    {
+        string s=Console.ReadLine();
+        int left=0;
+        int maxlength=0;
+        HashSet<int>st=new HashSet<int>();
+        for(int right=0;right<s.Length;right++)
+        {
+            
+            while(st.Contains(s[right]))
+            {
+                st.Remove(s[left]);
+                left++;
+            }
+            st.Add(s[right]);
+            maxlength=Math.Max(maxlength,right-left+1);
+        }
+        Console.WriteLine(maxlength);
+        
+        
+    }
+}
