@@ -1,0 +1,36 @@
+
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class HelloWorld {
+    
+    
+  static void Main() {
+      int n=int.Parse(Console.ReadLine());
+      string []input=Console.ReadLine().Split(' ');
+      int [] arr=new int[n];
+      for(int i=0;i<n;i++)
+      {
+          arr[i]=int.Parse(input[i]);
+          
+      }
+      
+      for(int i=1;i<n;i++)
+      {
+          int key=arr[i];
+          int j=i-1;
+          while(j>=0 && arr[j]>key)
+          {
+              arr[j+1]=key;
+              j--;
+          }
+          arr[j+1]=key;
+      }
+      for(int i=0;i<n;i++)
+      {
+          Console.Write(arr[i]+" ");
+      }
+  }
+  
+}
