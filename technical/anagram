@@ -1,0 +1,44 @@
+
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class HelloWorld {
+    
+    
+  static void Main() {
+    //   int n=int.Parse(Console.ReadLine());
+    //   string []input=Console.ReadLine().Split(' ');
+    //   int [] arr=new int[n];
+    //   for(int i=0;i<n;i++)
+    //   {
+    //       arr[i]=int.Parse(input[i]);
+          
+    //  }
+    string s=Console.ReadLine();
+    string s1=Console.ReadLine();
+    
+    
+    char [] c1=s.ToCharArray();
+    char [] c2=s1.ToCharArray();
+    
+    Array.Sort(c1);
+    Array.Sort(c2);
+    
+    string news=new string(c1);
+    string news2=new string(c2);
+    if(news.Equals(news2))
+    {
+        Console.WriteLine("true");
+    }
+    else
+    {
+        Console.WriteLine("false");
+        
+    }
+    
+      
+      
+  }
+  
+}
