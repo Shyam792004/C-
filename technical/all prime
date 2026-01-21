@@ -1,0 +1,43 @@
+
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class HelloWorld {
+    static bool prime(int a)
+    {
+      int cnt=0;
+      if(a==2||a==3)
+      {
+          return true;
+      }
+        for(int i=2;i<=a/2;i++)
+        {
+            if(a%i==0)
+            {
+                cnt++;
+                if(cnt==1)
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    
+  static void Main() {
+      int a=int.Parse(Console.ReadLine());
+      int b=int.Parse(Console.ReadLine());
+      for(int i=a;i<=b;i++)
+      {
+          if(prime(i))
+          {
+              Console.Write(i+" ");
+          }
+      }
+      
+      
+      
+  }
+  
+}
