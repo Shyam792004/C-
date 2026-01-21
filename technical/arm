@@ -1,0 +1,27 @@
+
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class HelloWorld {
+    static void arm(int a)
+    {
+        int add=0;
+        int n=a;
+      while(a>0)
+      {
+         add+= (int)Math.Pow(a%10,3);
+         a=a/10;
+      }
+      Console.WriteLine(add==n?"armstrong":"not");
+    }
+    
+  static void Main() {
+      int a=int.Parse(Console.ReadLine());
+      arm(a);
+      
+      
+      
+  }
+  
+}
