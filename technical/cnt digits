@@ -1,0 +1,28 @@
+
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class HelloWorld {
+    static void cnt(int a)
+    {
+        int cnt=0;
+      while(a>0)
+      {
+         cnt++;
+         a=a/10;
+      }
+      Console.WriteLine(cnt);
+    }
+    
+  static void Main() {
+      int a=int.Parse(Console.ReadLine());
+      cnt(a);
+      string s=a.ToString();
+      Console.WriteLine(s.Length);
+      
+      
+      
+  }
+  
+}
