@@ -1,0 +1,15 @@
+
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class HelloWorld {
+  static void Main() {
+      string s=Console.ReadLine();
+      char [] c=s.ToCharArray();
+      Array.Reverse(c);
+      string s1=new string(c);
+      Console.WriteLine(s.Equals(s1)?"Palindrome":"not a palindrome");
+  }
+  
+}
