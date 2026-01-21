@@ -1,0 +1,31 @@
+
+using System;
+using System.Linq;
+using System.Text;
+using System.Collections.Generic;
+
+class HelloWorld {
+    
+    
+  static void Main() {
+    //   int n=int.Parse(Console.ReadLine());
+    //   string []input=Console.ReadLine().Split(' ');
+    //   int [] arr=new int[n];
+    //   for(int i=0;i<n;i++)
+    //   {
+    //       arr[i]=int.Parse(input[i]);
+          
+    //  }
+   
+  
+        string str = Console.ReadLine();       // e.g., "Hello World"
+        string sub = Console.ReadLine();       // e.g., "World"
+
+        if(str.Contains(sub)) 
+            Console.WriteLine("Substring exists");
+        else
+            Console.WriteLine("Substring does not exist");
+    
+     
+  }
+}
