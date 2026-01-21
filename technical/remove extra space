@@ -1,0 +1,24 @@
+
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class HelloWorld {
+    
+    
+  static void Main() {
+    //   int n=int.Parse(Console.ReadLine());
+    //   string []input=Console.ReadLine().Split(' ');
+    //   int [] arr=new int[n];
+    //   for(int i=0;i<n;i++)
+    //   {
+    //       arr[i]=int.Parse(input[i]);
+          
+    //  }
+   
+   
+     string str=Console.ReadLine();
+     string newstr=str.Replace(" ","");
+     Console.WriteLine(newstr);
+  }
+}
