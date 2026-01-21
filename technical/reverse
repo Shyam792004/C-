@@ -1,0 +1,38 @@
+
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class HelloWorld {
+  static void Main() {
+      string s=Console.ReadLine();
+      string rev=new string(s.Reverse().ToArray());
+      Console.WriteLine(rev);
+  }
+}
+
+
+
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+class HelloWorld {
+  static void Main() {
+      string s=Console.ReadLine();
+      char [] arr=s.ToCharArray();
+      int l=0;
+      int r=s.Length-1;
+      while(l<r)
+      {
+          char temp=arr[l];
+          arr[l]=arr[r];
+          arr[r]=temp;
+          l++;
+          r--;
+      }
+      Console.WriteLine(new String(arr));
+      Console.WriteLine(string.Join("",arr));
+  }
+  
+}
