@@ -1,0 +1,18 @@
+static void duplicate(string s)
+    {
+
+        int [] freq=new int[26];
+        
+        foreach(char c in s)
+        {
+            char ch=char.ToLower(c);
+            freq[ch-'a']++;
+        }
+        for(int i=0;i<26;i++)
+        {
+            if(freq[i]>1)
+            {
+                Console.WriteLine((char)(i + 'a') + " -> " + freq[i]);
+            }
+        }
+    }
