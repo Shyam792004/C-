@@ -1,0 +1,35 @@
+static void duplicate_withOrder(string s)
+    {
+        Dictionary<char,int>freq=new Dictionary<char,int>();
+        List<char>duplicates=new List<char>();
+        
+        foreach(char c in s)
+        {
+            char ch=char.ToLower(c);
+            if(freq.ContainsKey(ch))
+            {
+                freq[ch]++;
+                if(freq[ch]==2)
+                {
+                    duplicates.Add(ch);
+                }
+            }
+            else
+            {
+                freq[ch]=1;
+            }
+        }
+        
+        if(duplicates.Count==0)
+        {
+            Console.WriteLine("No duplicates found");
+        }
+        else
+        {
+            Console.WriteLine("duplicates characters in order: ");
+            foreach(char ch in duplicates)
+            {
+                Console.Write(ch+" ");
+            }
+        }
+    }
