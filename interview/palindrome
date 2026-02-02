@@ -1,0 +1,16 @@
+static void palindrome(string s)
+    {
+        char [] arr=s.ToCharArray();
+        int l=0;
+        int r=s.Length-1;
+        while(l<r)
+        {
+            char temp=arr[l];
+            arr[l]=arr[r];
+            arr[r]=temp;
+            l++;
+            r--;
+        }
+        string reversed=new string(arr);
+        Console.WriteLine((reversed==s)?"palindrome":"not palindrome");
+    }
