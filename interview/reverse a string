@@ -1,0 +1,25 @@
+
+using System;
+class HelloWorld {
+    
+    static void reverse(string s)
+    {
+        char [] arr=s.ToCharArray();
+        int l=0;
+        int r=s.Length-1;
+        while(l<r)
+        {
+            char temp=arr[l];
+            arr[l]=arr[r];
+            arr[r]=temp;
+            l++;
+            r--;
+        }
+        string reversed=new string(arr);
+        Console.WriteLine(reversed);
+    }
+  static void Main() {
+      string s=Console.ReadLine();
+      reverse(s);
+  }
+}
