@@ -1,0 +1,37 @@
+
+using System;
+using System.Text;
+using System.Collections.Generic;
+class HelloWorld
+{
+    static void Vowels_Consonant(string s)
+    {
+    int vowels=0;
+    int consonants=0;
+        
+        foreach(char c in s)
+        {
+            if(char.IsLetter(c))
+            {
+                char ch=char.ToLower(c);
+                if("aeiou".Contains(ch))
+                {
+                    vowels++;
+                }
+                else
+                {
+                    consonants++;
+                }
+            }
+        }
+        Console.WriteLine("vowels : "+vowels);
+        Console.WriteLine("consonants : "+consonants);
+    }
+   static void Main() 
+  {
+    string s=Console.ReadLine();
+    Vowels_Consonant(s);
+    
+    
+  }
+}
