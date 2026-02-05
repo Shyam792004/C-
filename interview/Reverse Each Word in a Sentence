@@ -1,0 +1,19 @@
+using System;
+
+class HelloWorld
+{
+    static void Main()
+    {
+        string s = Console.ReadLine();
+        string[] words = s.Split(' ');
+
+        for (int i = 0; i < words.Length; i++)
+        {
+            char[] ch = words[i].ToCharArray();
+            Array.Reverse(ch);
+            words[i] = new string(ch);
+        }
+
+        Console.WriteLine(string.Join(" ", words));
+    }
+}
