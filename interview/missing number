@@ -1,0 +1,11 @@
+ static void Missing(int [] arr)
+    {
+        // int n=arr.Length;// 0 based index
+        int n=arr.Length+1;// 1 based index
+        int expected=n*(n+1)/2;
+        foreach(int x in arr)
+        {
+            expected=expected-x;
+        }
+        Console.WriteLine(expected);
+    }
