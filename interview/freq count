@@ -1,0 +1,37 @@
+
+using System;
+using System.Text;
+using System.Collections.Generic;
+using System.Linq;
+class HelloWorld
+{
+    static void CountFreq(String s)
+    {
+       string [] arr=s.Split(' ');
+       Dictionary<string,int>dic=new Dictionary<string,int>();
+       foreach(string a in arr)
+       {
+           if(dic.ContainsKey(a))
+           {
+               dic[a]++;
+           }
+           else
+           {
+               dic[a]=1;
+           }
+       }
+       foreach(var item in dic)
+       {
+           Console.Write(item.Key+" = "+item.Value+" ");
+       }
+       
+    }
+    
+   static void Main() 
+   {
+
+      string s=Console.ReadLine();
+      CountFreq(s);
+      
+   }
+}
