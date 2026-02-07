@@ -1,0 +1,28 @@
+static void Duplicate(string s)
+    {
+      Dictionary<char,int>di=new Dictionary<char,int>();
+      List<char>list=new List<char>();
+      foreach(char c in s)
+      {
+        if(di.ContainsKey(c)) 
+        {
+            di[c]++;
+        }
+        else
+        {
+            di[c]=1;
+        }
+      }
+      foreach(char c in s )
+      {
+            if(di[c]==2)
+            {
+                list.Add(c);
+                di[c]=1;
+            }
+      }
+      for(int i=0;i<list.Count;i++)
+      {
+          Console.Write(list[i]+" ");
+      }
+    }
