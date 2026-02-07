@@ -1,0 +1,17 @@
+   static void Duplicate_using_freq_arr(string s)
+    {
+      int []  freq=new int[26];
+
+      foreach(char c in s)
+      {
+          freq[c-'a']++;
+      }
+    
+      for(int i=0;i<26;i++)
+      {
+          if(freq[i]>1)
+          {
+              Console.WriteLine((char)('a'+i)+" "+freq[i]);
+          }
+      }
+    }
