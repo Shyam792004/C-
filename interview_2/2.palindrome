@@ -1,0 +1,11 @@
+static void Palindrome(string s)
+    {
+        char [] c=new char[s.Length];
+        int n=s.Length;
+        for(int i=0;i<n;i++)
+        {
+            c[i]=s[n-i-1];
+        }
+        string s2=new string(c);
+        Console.Write(s==s2?"Palindrome":"not palindrome");
+    }
